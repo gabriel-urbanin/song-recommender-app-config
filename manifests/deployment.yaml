@@ -9,21 +9,21 @@ spec:
   selector:
     matchLabels:
       app: song-recommender-app
-    template:
-      metadata:
-        labels:
-          app: song-recommender-app
-      spec:
-        containers:
-        - name: song-recommender-app-container
-          image: gabrielurbanin/song-recommender-server:v1.0
-          ports:
-          - containerPort: 5000
-          volumeMounts:
-          - name: song-recommender-app-volume
-            mountPath: /app/model
-        volumes:
+  template:
+    metadata:
+      labels:
+        app: song-recommender-app
+    spec:
+      containers:
+      - name: song-recommender-app-container
+        image: gabrielurbanin/song-recommender-server:v1.0
+        ports:
+        - containerPort: 5000
+        volumeMounts:
         - name: song-recommender-app-volume
-          persistentVolumeClaim:
-            claimName: project2-pvc
+          mountPath: /app/model
+      volumes:
+      - name: song-recommender-app-volume
+        persistentVolumeClaim:
+          claimName: project2-pvc
 
