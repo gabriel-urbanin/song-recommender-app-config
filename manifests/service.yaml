@@ -9,3 +9,4 @@ spec:
     - protocol: TCP
       port: 31526
       targetPort: 5000
+      nodePort: 31526
