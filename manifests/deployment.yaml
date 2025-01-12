@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: song-recommender-app-container
-        image: gabrielurbanin/song-recommender-server:v1.0
+        image: gabrielurbanin/song-recommender-server:v1.1
         ports:
         - containerPort: 5000
         volumeMounts:
