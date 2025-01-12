@@ -7,7 +7,7 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       app: song-recommender-app
     template:
       metadata:
@@ -15,7 +15,7 @@ spec:
           app: song-recommender-app
       spec:
         containers:
-        - name: song-recommender-app
+        - name: song-recommender-app-container
           image: gabrielurbanin/song-recommender-server:v1.0
           ports:
           - containerPort: 5000
