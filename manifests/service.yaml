@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: song-recommender-app-service
 spec:
+  type: NodePort
   selector:
     app: song-recommender-app
   ports:
